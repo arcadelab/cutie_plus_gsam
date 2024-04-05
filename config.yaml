@@ -1,0 +1,48 @@
+############ Image File ################
+## endovis2017
+annot_image: "frame000.png"
+dataset_name: "endovis2017"
+class_name: "binary"
+
+images_dir: "/home/joanna/workspace/data/endovis2017/cropped_train/instrument_dataset_1/images"
+annotation_dir: "data/annotation/endovis2017/instrument_dataset_1"
+masks_dir: "data/mask/endovis2017/instrument_dataset_1"
+video_dir: "data/video/endovis2017/instrument_dataset_1"
+video_frames_dir: "data/video_frames/endovis2017/instrument_dataset_1"
+
+## endovis2018
+# annot_image: "frame000.png"
+# dataset_name: "endovis2018"
+# class_name: "binary"
+
+# images_dir: "/home/joanna/workspace/data/endovis2018/seq_15/images"
+# annotation_dir: "data/annotation/endovis2018/seq_15"
+# masks_dir: "data/mask/endovis2018/seq_15"
+# video_dir: "data/video/endovis2018/seq_15"
+# video_frames_dir: "data/video_frames/endovis2018/seq15"
+
+########### Setting #####################
+device: "cuda"
+
+
+############ Cutie ###########
+
+cutie_weights: "cutie-base-nomose.pth"
+# options:
+# cutie-base-mega.pth
+# cutie-base-nomose.pth
+
+cutie_size: 480
+
+############ SAM ##############
+seg_model_type: "default"
+checkpoint: "segment-anything/checkpoints/sam_vit_h_4b8939.pth"
+
+
+############ GroundingDino ##############
+grounding_config_path: "GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+grounding_checkpoint_path: "GroundingDINO/weights/groundingdino_swint_ogc.pth"
+
+TEXT_PROMPT: "surgical instruments" 
+BOX_TRESHOLD: 0.35
+TEXT_TRESHOLD: 0.25

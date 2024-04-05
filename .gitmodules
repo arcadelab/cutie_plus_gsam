@@ -1,0 +1,9 @@
+[submodule "Cutie"]
+	path = Cutie
+	url = git@github.com:hkchengrex/Cutie.git
+[submodule "GroundingDINO"]
+	path = GroundingDINO
+	url = git@github.com:IDEA-Research/GroundingDINO.git
+[submodule "segment-anything"]
+	path = segment-anything
+	url = git@github.com:facebookresearch/segment-anything.git

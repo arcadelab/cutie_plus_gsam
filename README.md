@@ -10,10 +10,9 @@ Machine learning approaches for multi-view geometric scene understanding in endo
  </b></figcaption>
 
 ## Demo Video
-<p align="center">
-  <video width="640" height="340" controls>
-    <source src="resources/endovise2017_instrument_dataset_1.mp4" type="video/mp4">
-</video>
+https://github.com/arcadelab/cutie_plus_gsam/assets/96377883/c431fe1f-5605-470f-883b-529f4ff1f860
+
+
 </p>
 <p align="center">
   <video width="640" height="340" controls>

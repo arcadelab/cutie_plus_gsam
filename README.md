@@ -22,7 +22,7 @@ Machine learning approaches for multi-view geometric scene understanding in endo
 </p>
 
 
-## installation
+## Installation
 Tested on Ubuntu 20.04.6
 
 For our method, `python=3.9`, `torch=1.11.0`, `torchvision=0.12.0` are used
@@ -53,30 +53,39 @@ wget -q https://github.com/IDEA-Research/GroundingDINO/releases/tag/v0.1.0-alpha
 cd ..
 ```
 
-2. Download SAM checkpoints
+2. Download SAM checkpoints under the below directory
+```bash
 cd segment-anything
 mkdir checkpoints
-wget...
+```
 
 3. Download weights for Cutie
+```bash
 python scripts/download_models.py
+```
 
 ## QuickStart Guide
 
 Follow these simple steps to get started with the project:
-### 1. Modify Configuration
+#### 1. Modify Configuration
 Begin by configuring the settings in the `config.yaml` file to suit your requirements. This file contains various parameters that control the behavior of the application, such as checkpoint paths, text prompt, dataset, etc.
 
-### 2. Make annotations on the annot_image
+#### 2. Make annotations on the annot_image
 `python annotate_binary.py`
 
-### 3. Run cutie to propogare masks
+#### 3. Run cutie to propogare masks
 `python Cutie/scripting_demo.py`
 
-### 4. Generate masked frames and videos with masked frame
+#### 4. Generate masked frames and videos with masked frame
 `python generate_video.py`
 
 Results will be saved under the `data` folder
+
+## Acknowledgement
+Thanks Grounding DINO, Segment-Anything, and Cutie for their awesome work!
+- Grounding DINO:  https://github.com/IDEA-Research/GroundingDINO
+- Segment-Anything:   https://github.com/facebookresearch/segment-anything
+- Cutie:  https://github.com/hkchengrex/Cutie
 
 
 

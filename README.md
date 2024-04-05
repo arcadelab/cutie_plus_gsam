@@ -6,19 +6,13 @@
 ## Abstract
 Machine learning approaches for multi-view geometric scene understanding in endoscopic surgery often assume temporal consistency across the frames to limit challenges that algorithms contend with. However, in monocular scenarios where multiple views are acquired sequentially rather than simultaneously, the static scene assumption is too strong because surgical tools move during the procedure. To enable multi-view models despite tool motion, masking these temporally inconsistent tool regions is a feasible solution. However, manual tool-masking requires a prohibitive effort, given that endoscopic video can contain thousands of frames. This underscores the need for (semi-)automated techniques to 1) automatically mask the tools and/or 2) semi-automatically annotate large datasets such that algorithms for 1) may be developed. To facilitate semi-automated annotation, any solution must be both generalizable, such that it can be used out-of-the-box on diverse datasets, and easy to use. Recent methods for surgical tool annotation require either fine-tuning on domain-specific data or excessive user interaction, limiting their application to new data. Our work introduces GSAM+Cutie, a surgical tool annotation process relying on a combination of two recent foundation models for text-based image segmentation and video object segmentation. We show that a combination of Grounded-SAM and Cutie models provides good generalization for robust text-prompt-based video-level binary segmentation on endoscopic video, streamlining the mask annotation task. Through quantitative evaluation on two datasets, including a proprietary in-house dataset and EndoVis, we show that GSAM+Cutie outperforms similar ensembles, like SAM-PT, for video object segmentation. We also discuss the limitations and future research directions that GSAM+Cutie can motivate.
 ![](resources/overview.png)
-<figcaption align = "center"><b>Figure 1: Overview of Our Method. 
- </b></figcaption>
+
 
 ## Demo Video
-https://github.com/arcadelab/cutie_plus_gsam/assets/96377883/c431fe1f-5605-470f-883b-529f4ff1f860
+<img src="resources/endovis2017_instrument_dataset_3.gif"  />
 
+<img src="resources/sinus_160_400.gif"  />
 
-</p>
-<p align="center">
-  <video width="640" height="340" controls>
-    <source src="resources/sinus_160_400.mp4" type="video/mp4">
-</video>
-</p>
 
 
 ## Installation

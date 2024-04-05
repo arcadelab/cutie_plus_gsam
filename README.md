@@ -37,7 +37,7 @@ cd Cutie; pip install -e .
 ```
 
 ### Download Weights
-1. Download GroundingDINO Weights
+1. Download checkpoints for GroundingDINO
 ```bash
 cd GroundingDINO
 mkdir weights
@@ -47,13 +47,13 @@ wget -q https://github.com/IDEA-Research/GroundingDINO/releases/tag/v0.1.0-alpha
 cd ..
 ```
 
-2. Download SAM checkpoints under the below directory
+2. Download checkpoints for SAM under the below directory
 ```bash
 cd segment-anything
 mkdir checkpoints
 ```
 
-3. Download weights for Cutie
+3. Download checkpoints for Cutie manually, or they will be automatically downloaded when running `run_cutie_scripting_demo.py`
 ```bash
 python scripts/download_models.py
 ```
@@ -68,7 +68,7 @@ Begin by configuring the settings in the `config.yaml` file to suit your require
 `python annotate_binary.py`
 
 #### 3. Run cutie to propogate initial mask
-`python Cutie/scripting_demo.py`
+`python run_cutie_scripting_demo.py`
 
 #### 4. Generate masked frames and videos with masked frame
 `python generate_video.py`

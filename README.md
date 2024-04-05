@@ -75,6 +75,18 @@ Begin by configuring the settings in the `config.yaml` file to suit your require
 
 Results will be saved under the `data` folder
 
+## Citation
+If you find our work useful, please cite us using the following BibTeX entry:
+```
+@article{gsam_cutie24,
+  title={GSAM+Cutie: Text-Promptable Tool Mask Annotation for Endoscopic Video},
+  author={Roger David Soberanis-Mukul, Jiahuan Cheng, Jan Emily Mangulabnan, S. Swaroop Vedula, Masaru Ishii, Gregory D. Hager, Russ Taylor, Mathias Unberath},
+  journal={arXiv},
+  year={2024}
+} 
+```
+
+
 ## Acknowledgement
 Thanks Grounding DINO, Segment-Anything, and Cutie for their awesome work!
 - Grounding DINO:  https://github.com/IDEA-Research/GroundingDINO

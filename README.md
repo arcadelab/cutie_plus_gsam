@@ -64,11 +64,17 @@ Follow these simple steps to get started with the project:
 #### 1. Modify Configuration
 Begin by configuring the settings in the `config.yaml` file to suit your requirements. This file contains various parameters, such as checkpoint paths, text prompt, dataset, etc. You can find the detailed description of the `config.yaml` file in the `Configuration` section below.
 
-#### 2. Make annotations on the `annot_image`, and the annotation will be automatically saved under `.data/annotation` folder
+#### 2. Make annotations on the `annot_image`
+
 `python annotate_binary.py`
 
-#### 3. Run cutie to propogate initial mask, and the masks will be automatically saved under `.data/masks` folder
+The annotation will be automatically saved under `data/annotation` folder
+
+#### 3. Run cutie to propogate initial mask
+
 `python run_cutie_scripting_demo.py`
+
+The masks will be automatically saved under `data/masks` folder
 
 #### 4. [Optional] Generate masked frames and videos with masked frame for visualization
 `python generate_video.py`

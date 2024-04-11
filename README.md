@@ -62,18 +62,43 @@ python scripts/download_models.py
 
 Follow these simple steps to get started with the project:
 #### 1. Modify Configuration
-Begin by configuring the settings in the `config.yaml` file to suit your requirements. This file contains various parameters, such as checkpoint paths, text prompt, dataset, etc.
+Begin by configuring the settings in the `config.yaml` file to suit your requirements. This file contains various parameters, such as checkpoint paths, text prompt, dataset, etc. You can find the detailed description of the `config.yaml` file in the `Configuration` section below.
 
-#### 2. Make annotations on the annot_image
+#### 2. Make annotations on the `annot_image`, and the annotation will be automatically saved under `.data/annotation` folder
 `python annotate_binary.py`
 
-#### 3. Run cutie to propogate initial mask
+#### 3. Run cutie to propogate initial mask, and the masks will be automatically saved under `.data/masks` folder
 `python run_cutie_scripting_demo.py`
 
-#### 4. Generate masked frames and videos with masked frame
+#### 4. [Optional] Generate masked frames and videos with masked frame for visualization
 `python generate_video.py`
 
 Results will be saved under the `data` folder
+
+## Configuration
+### Dataset Configuration
+- `annot_image`: Name of the annotation image(prompt for GSAM) for the dataset.
+- `dataset_name`: Name of the dataset
+- `class_name`: Specifies the class name, set to binary.
+- `images_dir`: Path to the directory containing images/frames for the dataset.
+- `annotation_dir`: Path to the directory containing annotations for the dataset.
+- `masks_dir`: Path to the directory containing masks for the dataset.
+- `video_dir`: Path to the directory containing videos for the dataset.
+- `video_frames_dir`: Path to the directory containing video frames for the dataset.
+
+### Model Configuration
+#### Cutie
+- `cutie_weights`: Specifies the weights used for Cutie model
+- `cutie_size`: Size parameter for Cutie model, set to 480.
+#### SAM (Segment Anything Model)
+- `seg_model_type`: Specifies the type of segmentation model used, set to default.
+- `checkpoint`: Path to the checkpoint file for the SAM model.
+#### GroundingDino
+- `grounding_config_path`: Path to the configuration file for GroundingDino.
+- `grounding_checkpoint_path`: Path to the checkpoint file for GroundingDino
+- `TEXT_PROMPT`: Text prompt used for GroundingDino.
+- `BOX_TRESHOLD`: Threshold value for bounding boxes.
+- `TEXT_TRESHOLD`: Threshold value for text.
 
 ## Citation
 If you find our work useful, please cite us using the following BibTeX entry:
